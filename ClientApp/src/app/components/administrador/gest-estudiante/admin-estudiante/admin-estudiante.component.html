@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<body>
+
+
+    <div class="contenido">
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+
+                <!-- Masthead Heading -->
+                <h1 class="masthead-heading text-uppercase mb-0">Estudiantes</h1>
+
+                <!-- Icon Divider -->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="row">
+
+                <div class="col-6">
+                  <input style="margin-top: -500px; margin-bottom: -1000px;" [(ngModel)]="searchText" type="text" class="form-control" placeholder="Type to filter"  >
+                </div>
+
+        </div>
+
+        <br>
+
+        <div class="row mt-5">
+            <table align=center class='table-fill'>
+                <thead>
+                    <tr>
+                    <tr>
+                        <th>#</th>
+                        <th>Identificacion</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Telefono</th>
+                        <th>Ver</th>
+                    </tr>
+                </thead>
+                <tr *ngFor="let profesor of profesores | filtroProfesor:searchText; index as i"
+                    (click)="seleccionar(profesor)">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{profesor.identificacion}}</td>
+                    <td>{{profesor.nombres}}</td>
+                    <td>{{profesor.apellidos}}</td>
+                    <td>{{profesor.telefono}}</td>
+                    <td>
+                        <button class="btn btn-primary"
+                        routerLink="/administrador/estudiantes-modificar-eliminar/{{profesor.identificacion}}">Ver</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <section class="bg-white btn-container text-right">
+
+        <div class="btn-item">
+            <a style="margin-left: 800px; margin-top: 10px;" class="btn-ghost" routerLink="/administrador/estudiantes-guardar">Registrar</a>
+        </div>
+    </section>
+
+
+</body>

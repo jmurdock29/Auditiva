@@ -1,0 +1,142 @@
+<app-nav-lateral></app-nav-lateral>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+
+
+<body>
+
+    <div class="contenido">
+
+
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+
+                <!-- Masthead Heading -->
+                <h1 class="masthead-heading text-uppercase mb-0">Multiplicaciones </h1>
+
+                <!-- Icon Divider -->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+            </div>
+        </header>
+
+
+
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading -->
+                <h2 style="margin-top: 0px;"
+                    class="page-section-heading text-center text-uppercase text-secondary mb-0">
+                    Actividad 1</h2>
+
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+            </div>
+        </section>
+
+        
+    <div style="margin-top: -90px;" class="parte1">
+            <br>
+            <h1 align=center style="margin-top: -20px;" class="page-section-heading text-center text-uppercase text-secondary mb-0">Problema</h1>
+            <video style="margin-left: 180px;" class="pequeña" src="assets/video/ejercicio1-multiplicacion.mp4" controls width="640" height="480"></video>
+            <p style="margin-top: -200px; margin-left: 680px;">
+                    papá me ha dicho que compre 7 bombillos. Si cada bombillo
+                cuesta 4 mil, ¿cuanto me costaran los 7 bombillos?
+            </p>
+    
+        </div>
+
+
+
+        <button style="margin-left: 500px; margin-top: 50px;" class="btn-ghost" (click)="validacion()">Comprobar</button>
+
+
+        <a><img style="width: 1100px; margin-left: 200px; margin-top: 10px;" src="assets/img/IconoTitulos.png"
+                alt=""></a>
+
+
+        <div style="margin-top: 10px; margin-left: 50px;" class="contenedor-llama-padre2" id="contenedor-llama-padre2">
+            <div class="contenedor-ejercicio2">
+
+            </div>
+
+        </div>
+
+        <div style="margin-top: -530px; margin-left: 455px;" class="contenedor-llama-padre" id="contenedor-llama-padre">
+            <div class="contenedor-ejercicio">
+
+                <input [(ngModel)]="numeros.cNumero1" style="height: 60px; width: 80px;" type="text"
+                    class="form-control" id="caja-1" aria-label="Text input with segmented dropdown button" requiered>
+
+                <select [(ngModel)]="numeros.cSigno" style="height: 60px; width: 80px;" class="form-control">
+                    <option value=""> </option>
+                    <option value="Mas">+</option>
+                    <option value="Menos">-</option>
+                    <option value="Multiplicar">X</option>
+                    <option value="Division">/</option>
+                </select>
+
+                <input [(ngModel)]="numeros.cNumero2" style="height: 60px; width: 80px;" type="text"
+                    class="form-control" id="caja-2" aria-label="Text input with segmented dropdown button">
+
+                <div id="igual">
+                    <h1 style="color: red;">=</h1>
+                </div>
+
+                <input [(ngModel)]="numeros.cResultado" style="height: 60px; width: 80px;" type="text"
+                    class="form-control" id="caja-3" aria-label="Text input with segmented dropdown button">
+            </div>
+        </div>
+
+        <div style="margin-top: -530px; margin-left: 920px;" class="contenedor-llama-padre3"
+            id="contenedor-llama-padre3">
+            <div class="contenedor-ejercicio3">
+
+            </div>
+        </div>
+
+        <div style="margin-top: -80px;">
+
+            <div class="contenedor-dragable-1">
+                <div style="margin-left: -15px;" class="example-box" cdkDrag><img src="assets/img/ActividaMulti12.jpg" alt=""></div>
+                <br>
+                <div class="example-box" cdkDrag><img src="assets/img/ActividaMulti13.jpg" alt=""></div>
+                <br>
+                <div class="example-box" cdkDrag><img src="assets/img/ActividaMulti14.jpg" alt=""></div>
+
+            </div>
+            <div class="contenedor-dragable-2">
+                <div class="example-box" cdkDrag><img src="assets/img/ActividaMulti15.jpg" alt=""></div>
+                <div class="example-box" cdkDrag>Drag me around 1</div>
+                <div class="example-box" cdkDrag>Drag me around 1</div>
+                <div class="example-box" cdkDrag>Drag me around 1</div>
+            </div>
+
+        </div>
+
+
+
+
+        <section style="margin-top: 50px;" class="paginacion">
+            <ul>
+                <li><a routerLink="/contenido/vocabulario/multiplicaciones">1</a></li>
+                <li><a routerLink="/contenido/teoria-multiplicaciones">2</a></li>
+                <li><a routerLink="/contenido/multiplicaciones-Actividad1" class="active">3</a></li>
+                <li><a href="pagina4.html">4</a></li>
+                <li><a href="pagina5.html">5</a></li>
+            </ul>
+        </section>

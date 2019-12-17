@@ -1,0 +1,102 @@
+
+<div class="contenido">
+
+    <body>
+
+        <div class="container">
+            <div class="starter-template text-uppercase">
+
+                <div class="row">
+
+                    <div class="col-md-12 mt-5">
+
+                        <h1>Guardar Profesor </h1>
+
+                        <form [formGroup]="contacto" (ngSubmit)="onSubmit()">
+
+                            <div class="form-group">
+                                <label>Identificacion</label>
+                                <input [(ngModel)]="profesor.identificacion" class="form-control" type="text" formControlName="identificacion"
+                                    [ngClass]="{ 'is-invalid': submitted && f.identificacion.errors }" />
+                                <div *ngIf="submitted && f.identificacion.errors" class="invalid-feedback">
+                                    <div *ngIf="f.identificacion.errors.required">Por favor, ingrese su Identificacion
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Nombres</label>
+                                <input [(ngModel)]="profesor.nombres" class="form-control" type="text" formControlName="nombres"
+                                    [ngClass]="{ 'is-invalid': submitted && f.nombres.errors }" />
+                                <div *ngIf="submitted && f.nombres.errors" class="invalid-feedback">
+                                    <div *ngIf="f.nombres.errors.required">El nombre es obligatorio</div>
+                                    <div *ngIf="f.nombres.errors.nombres">Por favor, ingresa tu nombre(s)</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Apellido</label>
+                                <input [(ngModel)]="profesor.apellidos" class="form-control" type="text" formControlName="apellidos"
+                                    [ngClass]="{ 'is-invalid': submitted && f.apellidos.errors }" />
+                                <div *ngIf="submitted && f.apellidos.errors" class="invalid-feedback">
+                                    <div *ngIf="f.apellidos.errors.required">Por favor, ingrese su apellido(s)</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Genero"> Genero</label>
+                                <select [(ngModel)]="profesor.genero" type="text" class="form-control" formControlName="genero"
+                                    [ngClass]="{ 'is-invalid': submitted && f.genero.errors }">
+                                    <option value="">Seleccionar</option>
+                                    <option value="Femenino">Feminino</option>
+                                    <option value="Masculino">Masculino</option>
+
+                                </select>
+                                <div *ngIf="submitted && f.genero.errors" class="invalid-feedback">
+                                    <div *ngIf="f.genero.errors.required">Por favor, Seleccione su genero</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="fechanacimiento">Fecha de Nacimiento: </label>
+                                <input [(ngModel)]="profesor.fechaNacimiento" class="form-control" type="date" formControlName="FechaNacimiento"
+                                    [ngClass]="{ 'is-invalid': submitted && f.FechaNacimiento.errors }" />
+                                <div *ngIf="submitted && f.FechaNacimiento.errors" class="invalid-feedback">
+                                    <div *ngIf="f.FechaNacimiento.errors.required">Por favor, ingresa tu fecha nacimiento</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Telefono</label>
+                                <input [(ngModel)]="profesor.telefono" class="form-control" type="number" formControlName="telefono"
+                                    [ngClass]="{ 'is-invalid': submitted && f.telefono.errors }" />
+                                <div *ngIf="submitted && f.telefono.errors" class="invalid-feedback">
+                                    <div *ngIf="f.telefono.errors.required">Por favor, ingresa tu telefono</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Correo</label>
+                                <input [(ngModel)]="profesor.correo" class="form-control" type="text" formControlName="correo"
+                                    [ngClass]="{ 'is-invalid': submitted && f.correo.errors }" />
+                                <div *ngIf="submitted && f.correo.errors" class="invalid-feedback">
+                                    <div *ngIf="f.correo.errors.required">El correo es obligatorio</div>
+                                    <div *ngIf="f.correo.errors.correo">Por favor, ingresa tu correo</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button (click)="add()" class="btn btn-primary">Agregar</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+
+</div>

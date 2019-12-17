@@ -1,0 +1,54 @@
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+<body>
+        <div class="contenido">
+                <div style="margin-left: -100px; margin-top: -100px;" class="container">
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                     
+                            <div class="form-row">
+                                <div *ngIf="curso">
+                                    
+                                   
+                                <div style="margin-left: 350px; margin-top:-200px;" class="col-md-4">
+
+                                    <div class="form-group">
+                                        <label>Identificacion:
+                                            {{curso.cursoId}}
+                                        </label>
+                                    </div>
+                                </div>
+            
+                                <div class="col-md-7">
+            
+                                <div class="form-group">
+                                    <div  style="margin-left: 350px; margin-top:-20px;" class="form-group">
+                                        <label > Grado</label>
+                                    <select style="width: 300px;" type="text" [(ngModel)]="curso.pGrado" class="form-control"  >
+                                     <option value="">Seleccionar</option>
+                                                <option value="GRADO-2°">GRADO-2°</option>
+                                                <option value="GRADO-3°">GRADO-3°</option>
+                                                <option value="GRADO-4°">GRADO-4°</option>
+                                    </select>
+                                </div>
+                            </div>
+
+            
+                                <div style="margin-left: 400px;"  class="form-group">
+                                    <button style="" (click)="update()" class="btn btn-primary">Modificar</button>
+                                    &nbsp;
+                                    <button style="margin-left: 100px; margin-top: -110px;" (click)="delete()" class="btn btn-danger">Eliminar</button>
+                                </div>
+            
+                            </div>
+                        </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+</body>

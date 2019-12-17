@@ -1,0 +1,49 @@
+
+
+    <body>
+        <div class="login-box">
+            <img src="assets/img/logologin.png" class="avatar" alt="logo de auditiva">
+            <h1>Iniciar Sesión</h1>
+
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+                    <div class="col-sm-12">
+                            <label>Usuario:</label>
+                        </div>
+
+                        <div class="col-sm-12">
+                                <input [(ngModel)]="logear.usuario" formControlName="usuario" (blur)="get()" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.usuario.errors }" placeholder="Ingrese Usuario"
+                                type="text" />
+                                <div *ngIf="submitted && f.usuario.errors" class="invalid-feedback">
+                                        <div *ngIf="f.usuario.errors.required">Usuario requerido</div>
+                                </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                                <label>Contraseña:</label>
+                            </div>
+                            
+                            <div class="col-sm-12">
+                                    <input [(ngModel)]="logear.contrase" formControlName="contrase" (blur)="get()" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f.contrase.errors }" placeholder="Ingrese Contraseña"
+                                    type="password" />
+                                    <div *ngIf="submitted && f.usuario.errors" class="invalid-feedback">
+                                            <div *ngIf="f.usuario.errors.required">Contraseña requerida</div>
+                                    </div>
+                            </div>
+        
+                            <div class="row botonesayuda">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-success"  >Logear</button> +
+                                        <button class="btn btn-secondary" type="reset" (click)="onReset()">Limpiar</button>
+                                    </div>
+                                </div>
+             
+            </form>
+
+        </div>
+        </body>
+        
+
+        

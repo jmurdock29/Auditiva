@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<body>
+
+
+    <div class="contenido">
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+
+                <!-- Masthead Heading -->
+                <h1 class="masthead-heading text-uppercase mb-0">Curso</h1>
+
+                <!-- Icon Divider -->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+            </div>
+        </header>
+
+        <section class="page-section portfolio" id="portfolio">
+                <div class="container">
+                    <!-- Portfolio Section Heading -->
+                    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Consultar</h2>
+                    <h2 style="margin-top: 20px;" class="page-section-heading text-center text-uppercase text-secondary mb-0"> {{ tomaGrado() }} </h2>
+
+                    <!-- Icon Divider -->
+                    <div class="divider-custom">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="divider-custom-line"></div>
+                    </div>
+    
+                </div>
+            </section>
+
+            <section style="margin-top: -50px;" class="page-section portfolio" id="portfolio">
+                    <div class="container">
+                        <!-- Portfolio Section Heading -->
+                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"> {{ userNombre() }} {{ userApellido() }}</h2>
+        
+                        <!-- Icon Divider -->
+                        <div class="divider-custom">
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="divider-custom-line"></div>
+                        </div>
+        
+                    </div>
+                </section>
+               
+                <div style="margin-top: -100px;" class="row">
+
+                        <div class="col-6">
+                          <input style="margin-left: 50px; width: 500px; height: 50px;visibility:hidden"  [(ngModel)]="searchText" type="text" class="form-control" placeholder="Type to filter"  >
+                        </div>
+                </div>
+        
+      
+        <br>
+        <div  class="row mt-5">
+            <table align=center style="margin-top: -50px;" class="table-fill">
+                <thead>
+                    <tr>
+                    <tr>
+                                 
+                            <th>#</th>
+                            <th>Identificacion</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Grado</th>
+                        <!-- <th>Ver</th> -->
+                    </tr>
+                </thead>
+                <tr  *ngFor="let curso of curso | filtroCurso:searchText; index as i" (click)="seleccionar(curso)">
+                        <th scope="row">{{ i + 1 }}</th>
+                        <td>{{curso.cursoId}}</td>
+                        <td>{{curso.pNombres}}</td>
+                        <td>{{curso.pApellidos}}</td>
+                        <td>{{curso.pGrado}}</td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+
+}
+}    
+
+</body>

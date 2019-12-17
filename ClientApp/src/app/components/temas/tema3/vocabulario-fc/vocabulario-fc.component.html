@@ -1,0 +1,130 @@
+
+
+
+<!--  -->
+<app-nav-lateral></app-nav-lateral>
+
+<head>
+        <title Document></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script src="header.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+    </head>
+
+
+<body>
+  
+
+    <div class="contenido">
+
+        <header class="masthead bg-primary text-white text-center">
+                <div class="container d-flex align-items-center flex-column">
+                    <!-- Masthead Heading -->
+                    <h1 class="masthead-heading text-uppercase mb-0">Fracciones</h1>
+        
+                    <!-- Icon Divider -->
+                    <div class="divider-custom divider-light">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="divider-custom-line"></div>
+                    </div>
+        
+                </div>
+            </header>
+
+      
+        <section class="page-section portfolio" id="portfolio">
+                <div class="container">
+                    <!-- Portfolio Section Heading -->
+                    <h2  class="page-section-heading text-center text-uppercase text-secondary mb-0">Vocabulario</h2>
+        
+                    <!-- Icon Divider -->
+                    <div class="divider-custom">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="divider-custom-line"></div>
+                    </div>
+        
+                </div>
+            </section>
+
+
+        <br>
+
+        <div class="fracvocabulario">         
+            
+            <div >
+                    <a class="btn-ghost"> <span style="font-size:30px;cursor:pointer" align=center (click)="openNav('FraccionC')"> Fraccion</span> </a>
+          
+                    <a class="btn-ghost">  <span style="font-size:30px;cursor:pointer" align=center (click)="openNav('NumeradorC')"> Numerador </span>  </a>
+              
+                    <a class="btn-ghost">  <span style="font-size:30px;cursor:pointer" align=center (click)="openNav('DenominadorC')"> Denominador </span>  </a>
+            </div>
+              
+            
+            <div id="FraccionC" class="desplegable">
+                    <h1 align=center >Fraccion</h1>
+                    <video class="pequeña" src="assets/video/VocFracciones1.mp4" controls width="640" height="480"></video>
+    
+                    <p>
+                            Es una expresion numerica que representa una o varias partes iguales de la unidad.           
+                    </p>
+                    <a ><img class="pequeña" src="assets/img/VocabFracc1.png" alt=""></a>
+                    <img >
+    
+                    <a href="javascript:void(0)" class="closebtn" (click)="closeNav('FraccionC')">&times;</a>
+                </div> 
+       <br>
+                <div id="NumeradorC" class="desplegable">
+                    <h1 align=center >Numerador</h1>
+                    <video class="pequeña" src="assets/video/VocFracciones2.mp4" controls width="640" height="480"></video>
+    
+                    <p>
+                            Indica el numerador de partes que se toman de la unidad.  
+                            Es el número que está encima de la raya fraccionaria.
+    
+                    </p>
+                        
+                    <a ><img class="pequeña" style="width: 600px; height: 300px;" src="assets/img/VocabFracc2.png" alt=""></a>
+                    <a href="javascript:void(0)" class="closebtn" (click)="closeNav('NumeradorC')">&times;</a>
+                </div>
+    <br>
+                <div id="DenominadorC" class="desplegable">
+                  
+                    <h1 align=center >Denominado</h1>
+                    <video class="pequeña" src="assets/video/VocFracciones3.mp4" controls width="640" height="480"></video>
+    
+                    <p>
+                      Indica el numero de partes iguales en que se divide la unidad.
+                      Es el número que está por debajo de la raya fraccionaria.
+                    </p>
+                        
+                    <a ><img class="pequeña" style="width: 600px; height: 300px;" src="assets/img/VocabFracc3.png" alt=""></a>
+                    <a href="javascript:void(0)" class="closebtn" (click)="closeNav('DenominadorC')">&times;</a>
+                </div>
+        </div>
+
+<br>
+
+    	<section class="paginacion">
+                <ul>
+                        <li><a routerLink="/contenido/vocabulario/fracciones" class="active">1</a></li>
+                        <li><a  routerLink="/contenido/teoria-fracciones-parte-1">2</a></li>
+                    <li><a routerLink="/contenido/teoria-fracciones-parte-2">3</a></li>
+                     <li><a href="pagina4.html">4</a></li>
+                    <li><a href="pagina5.html">5</a></li>
+                </ul>
+            </section>
+
+    </div>
+</body>
+
+
+
+

@@ -1,0 +1,130 @@
+<body>
+    <div class="contenido">
+
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+
+                <!-- Masthead Heading -->
+                <h1 class="masthead-heading text-uppercase mb-0"> Cursos</h1>
+
+                <!-- Icon Divider -->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+            </div>
+        </header>
+
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading -->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Gestionar integrantes
+                </h2>
+
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="parte1">
+            <img style="margin-left: 200px;" align=center class="masthead-avatar mb-5" src="assets/img/Proesor.svg"
+                alt="">
+
+            <div class="page-section portfolio">
+                <h2 style="margin-top: -350px; margin-left: 400px;"
+                    class="page-section-heading text-center text-uppercase text-secondary mb-0">Agregar</h2>
+                <!-- Masthead Heading -->
+                <div style="margin-top: 260px; margin-left: 250px;">
+                    <h1 class="masthead-heading text-uppercase mb-0">Profesor</h1>
+                    <a>Nombre profesor</a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+        <div style="margin-top: -320px; margin-left: 600px;">
+            <div class="form-group">
+                <h1 class="masthead-heading text-uppercase mb-0">Grado</h1>
+                <select [(ngModel)]="searchText" type="text" style="width: 600px" class="form-control">
+                    <option value=""> Seleccionar </option>
+                    <option >GRADO-2°</option>
+                    <option >GRADO-3°</option>
+                    <option >GRADO-4°</option>
+                </select>
+            </div>
+            <a class="btn-ghost" > <span style="font-size:30px;cursor:pointer;"  (click)="open()" >Profesor</span> </a>
+            <!-- routerLink="/administrador/cursos-agregar-profesor" -->
+            <a class="btn-ghost"> <span style="font-size:30px;cursor:pointer;" (click)="open2()">Estudiante</span> </a>
+
+    
+        </div>
+
+
+
+        <!-- Masthead Avatar Image -->
+
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading -->
+                <h2 style="margin-top: 50px;"
+                    class="page-section-heading text-center text-uppercase text-secondary mb-0">Estudiantes
+                </h2>
+
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <div class="row mt-5">
+            <table style="margin-top: -80px;" class='table table-striped'>
+                <thead>
+                    <tr>
+                    <tr>
+                        <th>#</th>
+                        <th>Identificacion</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Grado</th>
+                        <th>Ver</th>
+                    </tr>
+                </thead>
+  
+                <tr  *ngFor="let curso of cursos | filtroCurso:searchText; index as i" (click)="seleccionar(curso)">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{curso.cursoId}}</td>
+                    <td>{{curso.pNombres}}</td>
+                    <td>{{curso.pApellidos}}</td>
+                    <td>{{curso.pGrado}}</td>
+                    <td>
+                        <button  routerLink="/administrador/cursos-modificar-eliminar/{{curso.cursoId}}" class="btn btn-primary">Ver</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+

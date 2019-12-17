@@ -1,0 +1,13 @@
+/* TABLA */
+
+table {
+    width: 85%;
+    font-weight: 30;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align:center;
+    margin: 0 auto;
+  }
+  th, td {
+    width: 25%;
+  }

@@ -1,0 +1,22 @@
+
+.contenido{
+    padding-top: 500px;
+}
+
+
+.form-group label{
+	font-size: 100%;
+    font: 30px  'Signika';
+}
+/* font: 30px 'Roboto Condensed';  */
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(/assets/img/fondoInicio-2.jpg) no-repeat center top;
+    background-size: cover ;           /* Opera 9.5 */
+    font-family: sans-serif;
+    height: 100vh;
+  }

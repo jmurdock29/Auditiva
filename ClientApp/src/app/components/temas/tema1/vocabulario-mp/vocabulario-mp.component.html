@@ -1,0 +1,130 @@
+<!--  -->
+<app-nav-lateral></app-nav-lateral>
+
+<head>
+        <title Document></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script src="header.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+    
+
+    <div class="contenido">
+
+        <header class="masthead bg-primary text-white text-center">
+                <div class="container d-flex align-items-center flex-column">
+        
+                    <!-- Masthead Heading -->
+                    <h1 class="masthead-heading text-uppercase mb-0">Multiplicaciones</h1>
+        
+                    <!-- Icon Divider -->
+                    <div class="divider-custom divider-light">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="divider-custom-line"></div>
+                    </div>
+        
+                </div>
+            </header>
+
+      
+        <section class="page-section portfolio" id="portfolio">
+                <div class="container">
+                    <!-- Portfolio Section Heading -->
+                    <h2  class="page-section-heading text-center text-uppercase text-secondary mb-0">Vocabulario</h2>
+        
+                    <!-- Icon Divider -->
+                    <div class="divider-custom">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="divider-custom-line"></div>
+                    </div>
+        
+                </div>
+            </section>
+
+
+        <br>
+
+        <div class="multvocabulario">         
+            
+            <div style="margin-top: -50px; margin-left: 50px;">
+                    <a class="btn-ghost"> <span style="font-size:30px;cursor:pointer;"  (click)="openNav('MultiplicacionC')"> Multiplicacion</span> </a>
+          
+                    <a class="btn-ghost"> <span style="font-size:30px;cursor:pointer; margin-left: 100px;" align=center (click)="openNav('FactoresC')"> Factores </span>  </a>
+              
+                        <a class="btn-ghost">  <span style="font-size:30px;cursor:pointer; margin-left: 100px;" align=center (click)="openNav('ProductoC')"> Producto </span>  </a>
+            </div>
+              
+            
+            <div id="MultiplicacionC" class="desplegable">
+                <h1 align=center >Multiplicacion</h1>
+
+                <!-- <iframe src="http://www.fundacioncnse.org/educa/matematicas/videos/multiplicacion.mp4" frameborder="0" ></iframe> -->
+               
+                <video class="pequeña" src="assets/video/VocMultiplicacion1.mp4" controls width="640" height="480"></video>
+                <p>
+                        La multiplicación es una operación aritmética que consiste en calcular el producto (<strong style="color: tomato;">resultado</strong>)
+                        que se obtiene al sumar un mismo número (<strong style="color: tomato;">factor</strong>) tantas veces como el valor
+                        del otro número (<strong style="color: tomato;">factor</strong>).
+                       Esta operación aritmética se designa con el signo por, que puede ser la equis “x” o el punto “•”.           
+                </p>
+                <a ><img class="pequeña" src="assets/img/multiVob1.png" alt=""></a>
+                <img >
+
+                <a href="javascript:void(0)" class="closebtn" (click)="closeNav('MultiplicacionC')">&times;</a>
+            </div> 
+   <br>
+            <div id="ProductoC" class="desplegable">
+                <h1 align=center >Producto</h1>
+                <video class="pequeña" src="assets/video/VocMultiplicacion3.mp4" controls width="640" height="480"></video>
+
+                <p>
+                    El producto hace referencia al resultado de la operación de la multiplicación de los dos factores o más.
+                    Los terminos de la multiplicacion se llaman <strong style="color: tomato;">factor</strong> y <strong style="color: tomato;">productos</strong>.      
+                </p>
+                    
+                <a ><img class="pequeña" src="assets/img/multiVob3.png" alt=""></a>
+                <a href="javascript:void(0)" class="closebtn" (click)="closeNav('ProductoC')">&times;</a>
+            </div>
+<br>
+            <div id="FactoresC" class="desplegable">
+              
+                <h1 align=center >Factores</h1>
+                <video class="pequeña" src="assets/video/VocMultiplicacion2.mp4" controls width="640" height="480"></video>
+
+                <p>
+                   Son los dos numeros que se multiplican.
+                </p>
+                    
+                <a ><img class="pequeña" src="assets/img/multiVob2.png" alt=""></a>
+                <a href="javascript:void(0)" class="closebtn" (click)="closeNav('FactoresC')">&times;</a>
+            </div>
+        </div>
+
+<br>
+
+    	<section class="paginacion">
+                <ul>
+                    <li><a routerLink="/contenido/vocabulario/multiplicaciones" class="active">1</a></li>
+                    <li><a  routerLink="/contenido/teoria-multiplicaciones">2</a></li>
+                    <li><a routerLink="/contenido/multiplicaciones-actividad-1">3</a></li>
+                     <li><a href="pagina4.html">4</a></li>
+                    <li><a href="pagina5.html">5</a></li>
+                </ul>
+            </section>
+
+    </div>
+</body>
+
+
+
+

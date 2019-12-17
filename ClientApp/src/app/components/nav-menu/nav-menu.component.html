@@ -1,0 +1,85 @@
+<head>
+    <title Document></title>
+    <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+    <script src="header.js"></script>
+  </head>
+  
+  <header>
+    <!-- 
+    <div class=wrapper>
+     <div class="logo">
+      <a class="nav-link" routerLink="/home"> Auditiva</a>
+     </div>
+     <nav>
+      <ul class="nav nav-pills">
+      <li role="presentation"><a routerLink="/user/login"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a> </li>
+      <li role="presentation" class="active"><a class="nav-link"  routerLink="/user/register"><span class="glyphicon glyphicon-user"></span> REGISTRARSE </a>  </li>
+    </ul>
+    </nav>
+    </div> -->
+  
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" routerLink="/home">Auditiva</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
+          type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+
+          <ul class="navbar-nav ml-auto">
+
+              <ul class="navbar-nav ml-auto" *ngIf="!isAuthenticated()">
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" [routerLink]='["/user/login"]'>Iniciar Sesion</a>
+                  </li>
+                </ul>
+
+            <ul class="navbar-nav ml-auto" *ngIf="isAuthenticatedRole('ADMINISTRADOR')">
+                <li class="nav-item mx-0 mx-lg-1">
+                  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" [routerLink]='["/administrador/perfil"]'>Hola {{ nameUser() }}</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="" (click)="logout()" title="Logout"> X </a>
+                </li>
+              </ul>
+
+
+              <ul class="navbar-nav ml-auto" *ngIf="isAuthenticatedRole('PROFESOR')">
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" [routerLink]='["/profesor/perfil"]'>Hola {{ nameUser() }}</a>
+                  </li>
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="" (click)="logout()" title="Logout"> X </a>
+                  </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto" *ngIf="isAuthenticatedRole('ESTUDIANTE')">
+                    <li class="nav-item mx-0 mx-lg-1">
+                      <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" [routerLink]='["/estudiante/perfil"]'>Hola {{ nameUser() }}</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" 
+                        [routerLink]='["/contenido/conceptos"]'> ¿Eres nuevo? </a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                      <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="" (click)="logout()" title="Logout"> X </a>
+                    </li>
+                   
+                  </ul>
+              
+          
+      
+      
+            
+      
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+    <router-outlet></router-outlet>
+
+  </header>

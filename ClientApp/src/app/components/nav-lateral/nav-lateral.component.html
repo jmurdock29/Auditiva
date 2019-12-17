@@ -1,0 +1,21 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+<div class="contenido">
+
+    <div id="menu" class="sidenav">
+        <a routerLink="/home/contenido" id="icon-home">Inicio</a>
+        <a id="icon-indice" style="cursor:pointer;"  (click)="openNav('IndiceC')">Indice</a>
+        <a  routerLink="/estudiante/curso" id="icon-curso">Curso</a>
+        <a routerLink="/buzon/auydaOnline" id="icon-buzon">Buzon</a>
+      </div>
+     
+
+</div>
+
+       
+<div id="IndiceC" class="equisde">  
+  <app-indice></app-indice>
+ <!-- The overlay -->
+   <a style="margin-top: 50px;" href="javascript:void(0)" class="closebtn" (click)="closeNav('IndiceC')">&times;</a>
+</div>
+

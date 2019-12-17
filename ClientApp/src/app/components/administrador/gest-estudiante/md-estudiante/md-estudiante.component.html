@@ -1,0 +1,93 @@
+
+
+<div class="contenido">
+
+    <body>
+
+        <div class="container">
+            <div class="starter-template text-uppercase">
+
+                <div class="row">
+
+                    <div class="col-md-12 mt-5">
+
+                        <div *ngIf="profesor">
+                            <div>
+                                <h1 class="h2">Consulta Detallada</h1>
+                            </div>
+
+                            <p>Modificar / Eliminar</p>
+
+                            
+                            <div class="form-group">
+                                <label>Identificacion:
+                                    {{profesor.identificacion}}
+
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nombres:
+                                    <input [(ngModel)]="profesor.nombres" class="form-control"
+                                        placeholder="digite nombres" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Apellidos:
+                                    <input [(ngModel)]="profesor.apellidos" class="form-control"
+                                        placeholder="digite apellidos" type="text" />
+                                </label>
+                            </div>
+
+                    
+
+                            <div class="form-group">
+                                <label > Genero</label>
+                                <select [(ngModel)]="profesor.genero" class="form-control" 
+                                 >
+                                    <option value="">Seleccionar</option>
+                                    <option value="Femenino">Feminino</option>
+                                    <option value="Masculino">Masculino</option>
+
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                    <label>Fecha Nacimiento:
+                                        <input [(ngModel)]="profesor.fechaNacimiento" class="form-control"
+                                            placeholder="digite Fecha Nacimiento" type="Date" />
+                                    </label>
+                                </div>
+
+                                
+
+                            <div class="form-group">
+                                <label>Telefono:
+                                    <input [(ngModel)]="profesor.telefono" class="form-control"
+                                        placeholder="digite telefono" type="number" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                    <label>Correo:
+                                        <input [(ngModel)]="profesor.correo" class="form-control"
+                                            placeholder="digite correo" type="text" />
+                                    </label>
+                                </div>
+    
+
+                            <div class="form-group">
+                                <button (click)="update()" class="btn btn-primary">Modificar</button>
+                                &nbsp;
+                                <button (click)="delete()" class="btn btn-danger">Eliminar</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</div>

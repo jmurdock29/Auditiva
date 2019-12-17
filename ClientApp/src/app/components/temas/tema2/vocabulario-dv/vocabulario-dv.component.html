@@ -1,0 +1,169 @@
+
+<!--  -->
+<app-nav-lateral></app-nav-lateral>
+
+<head>
+        <title Document></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script src="header.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+    </head>
+
+
+<body>
+   
+
+    <div class="contenido">
+
+        <header class="masthead bg-primary text-white text-center">
+                <div  class="container d-flex align-items-center flex-column">
+        
+                    <!-- Masthead Heading -->
+                    <h1 class="masthead-heading text-uppercase mb-0">Divisiones</h1>
+        
+                    <!-- Icon Divider -->
+                    <div class="divider-custom divider-light">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="divider-custom-line"></div>
+                    </div>
+        
+                </div>
+            </header>
+        </div>
+
+      
+        <section class="page-section portfolio" id="portfolio">
+                <div class="container">
+                    <!-- Portfolio Section Heading -->
+                    <h2  class="page-section-heading text-center text-uppercase text-secondary mb-0">Vocabulario</h2>
+        
+                    <!-- Icon Divider -->
+                    <div class="divider-custom">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="divider-custom-line"></div>
+                    </div>
+        
+                </div>
+            </section>
+
+
+        <br>
+
+        <div class="disvocabulario" >     
+
+            <div style="margin-left: 200px;">
+                    <a class="btn-ghost"> <span style="margin-left: 5px; font-size:30px;cursor:pointer"  (click)="openNav('DivisionC')"> Division</span> </a>
+
+                    <a class="btn-ghost"> <span style="margin-left: 70px; font-size:30px;cursor:pointer" align=center (click)="openNav('DividiendoC')"> Dividiendo </span>  </a>
+        
+                    <a class="btn-ghost"> <span style="margin-left: 80px; font-size:30px;cursor:pointer" align=center (click)="openNav('DivisorC')"> Divisor </span>  </a>
+            </div>
+            
+ 
+            <div style="margin-top:-50px; margin-left: 400px;">
+                    <a   class="btn-ghost"> <span style=" margin-left: 5px; margin-top:30px; font-size:30px;cursor:pointer; " align=center (click)="openNav('RestoC')"> Resto </span>  </a>
+
+                    <a class="btn-ghost"> <span style="margin-left: 130px; margin-top:30px; font-size:30px;cursor:pointer; " align=center (click)="openNav('CocienteC')"> Cociente </span>  </a>
+            </div>
+           
+
+            <div id="DivisionC" class="desplegable">
+                    <h1 align=center >Division</h1>
+                    <video class="pequeña" src="assets/video/VocDivision1.mp4" controls width="640" height="480"></video>
+    
+                    <p>
+                            La división es el resultado de la distribución de algo en grupos o partes iguales.
+                            Es la operacion inversa a la multiplicacion. 
+                    </p>
+                    <a ><img class="pequeña" style="margin-left: 80px;" src="assets/img/VocabDivi.png" alt=""></a>
+                    <a ><img class="pequeña"  style="margin-left: 450px; margin-top: -330px;" src="assets/img/VocabDivi1.png" alt=""></a>
+
+                    <img >
+    
+                    <a href="javascript:void(0)" class="closebtn" (click)="closeNav('DivisionC')">&times;</a>
+            </div> 
+    <br>
+                <div id="DividiendoC" class="desplegable">
+                    <h1 align=center >Dividiendo</h1>
+                    <video class="pequeña" src="assets/video/VocDivision2.mp4" controls width="640" height="480"></video>
+    
+                    <p>
+                       Es una cantidad seleccionada para repartir, y aquella por la que se realiza la división.
+
+
+                    </p>
+                        
+                    <a ><img class="pequeña" src="assets/img/VocabDivi2.png" alt=""></a>
+                    <a href="javascript:void(0)" class="closebtn" (click)="closeNav('DividiendoC')">&times;</a>
+                </div>
+    <br>
+                <div id="DivisorC" class="desplegable">
+                  
+                    <h1 align=center >Divisor</h1>
+                    <video class="pequeña" src="assets/video/VocDivision3.mp4" controls width="640" height="480"></video>
+    
+                    <p>
+                        El aquel numero por el cual se dividirá la cantidad que fue seleccionada en el dividendo.                    </p>
+                        
+                    <a ><img class="pequeña" src="assets/img/VocabDivi3.png" alt=""></a>
+                    <a href="javascript:void(0)" class="closebtn" (click)="closeNav('DivisorC')">&times;</a>
+              
+                </div>
+
+                <div id="RestoC" class="desplegable">
+                  
+                        <h1 align=center >Resto</h1>
+                        <video class="pequeña" src="assets/video/VocDivision4.mp4" controls width="640" height="480"></video>
+        
+                        <p>
+                                Se trata del número que queda sobrante en la división, o aquel que no puede distribuirse.
+                                las divisiones se clasifican como exacta si su resto es cero, o inexactas cuando no lo es.
+                                                            
+                        <a ><img class="pequeña" src="assets/img/VocabDivi4.png" alt=""></a>
+                        <a href="javascript:void(0)" class="closebtn" (click)="closeNav('RestoC')">&times;</a>
+                  
+                    </div>
+
+                    <div id="CocienteC" class="desplegable">
+                  
+                            <h1 align=center >Cociente</h1>
+                            <video class="pequeña" src="assets/video/VocDivision5.mp4" controls width="640" height="480"></video>
+            
+                            <p>
+                                    El cociente se conoce como el resultado de la operación entre el dividendo y el divisor.</p>
+                                
+                            <a ><img class="pequeña" src="assets/img/VocabDivi5.png" alt=""></a>
+                            <a href="javascript:void(0)" class="closebtn" (click)="closeNav('CocienteC')">&times;</a>
+                      
+                        </div>
+                        
+            </div>
+
+
+<br>
+
+    	<section style="margin-top: 250px;" class="paginacion">
+                <ul>
+                    <li><a routerLink="/contenido/vocabulario/divisiones" class="active">1</a></li>
+                    <li><a  routerLink="/contenido/teoria-divisiones">2</a></li>
+                    <li><a href="pagina3.html">3</a></li>
+                     <li><a href="pagina4.html">4</a></li>
+                    <li><a href="pagina5.html">5</a></li>
+                </ul>
+            </section>
+
+</body>
+
+
+
+
+
+

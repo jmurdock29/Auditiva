@@ -1,0 +1,67 @@
+<div class="contenido">
+  <div style="margin-left: -100px; margin-top: -100px;" class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2>Agregar profesor</h2>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+          <div class="form-row">
+            <div class="col-md-4">
+              <label>Identificacion</label>
+              <input type="text" formControlName="cursoId" class="form-control" (blur)="buscarProfesor()"
+                (dblclick)="openModalProfesor()" [ngClass]="{ 'is-invalid': f.cursoId.errors }" />
+              <div *ngIf="submitted && f.cursoId.errors" class="invalid-feedback">
+                <div *ngIf="f.cursoId.errors.required">Por favor, ingrese su Identificacion
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-1">
+              <label> </label>
+              <button class="btn btn-primary" type="button" (click)="openModalProfesor()">...</button>
+            </div>
+
+            <div class="col-md-7">
+              <label>Apellidos</label>
+              <input style="margin-left: 20px; width: 390px; " type="text" readonly formControlName="pApellidos" class="form-control" />
+            </div>
+
+
+            <div class="col-md-7">
+              <label>Nombres</label>
+              <input style="width: 550px;" type="text" readonly formControlName="pNombres"
+                class="form-control" />
+            </div>
+
+          </div>
+
+          <div class="control-group">
+            <div class="form-group">
+              <label>Asignar grado</label>
+              <select style="width: 550px;" type="text" formControlName="pGrado" class="browser-default custom-select"  
+                [ngClass]="{ 'is-invalid': submitted && f.pGrado.errors }">
+                <option value="">Seleccionar</option>
+                <option value="GRADO-2°">GRADO-2°</option>
+                <option value="GRADO-3°">GRADO-3°</option>
+                <option value="GRADO-4°">GRADO-4°</option>
+              </select>
+              <div *ngIf="submitted && f.pGrado.errors" class="invalid-feedback">
+                <div *ngIf="f.pGrado.errors.required">Por favor, asigne grado</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-7">
+            <label>Cargo</label>
+            <input style="width: 550px;" type="text" readonly formControlName="pTipo" class="form-control" />
+          </div>
+
+          <div style="margin-top: 50px;" class="text-center">
+            <button class="btn btn-primary mr-1" >Agregar</button>
+            <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

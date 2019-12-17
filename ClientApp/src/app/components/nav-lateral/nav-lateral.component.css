@@ -1,0 +1,121 @@
+
+
+
+
+/* .menu{
+    position: fixed;
+    left: 0;
+    top: 200px;
+    z-index: 2000;
+
+}
+
+
+.menu ul li a{
+    display: inline-block;
+    color: #ffffff;
+    background: #000;
+    padding: 10px 15px;
+    text-decoration: navy;
+} */
+
+
+.contenido {
+    padding-top: 2px;
+   }
+
+
+/* Style the links inside the sidenav */
+#menu a {
+    position: fixed; /* Position them relative to the browser window */
+    left: -80px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 100px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+    z-index: 2000;
+    font: 25px 'Signika'; 
+
+  }
+  
+  #menu a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+  }
+  
+  /* The about link: 20px from the top with a green background */
+  #icon-home {
+    top: 220px;
+    background-color: #4CAF50;
+  }
+  
+  #icon-indice {
+    top: 280px;
+    background-color: #2196F3; /* Blue */
+  }
+  
+  #icon-curso {
+    top: 340px;
+    background-color: #f44336; /* Red */
+  }
+  
+  #icon-buzon {
+    top: 400px;
+    background-color: #555 /* Light Black */
+  }
+
+
+ 
+/* ******************************************************************************************************** */
+  .equisde {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  
+  .equisde-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .equisde a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .equisde a:hover, .equisde a:focus {
+    color: #f1f1f1;
+  }
+  
+  .equisde .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .equisde {overflow-y: auto;}
+    .equisde a {font-size: 20px}
+    .equisde .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }

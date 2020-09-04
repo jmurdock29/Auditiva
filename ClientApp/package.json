@@ -36,7 +36,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.13.1",
     "nodemailer": "^6.4.1",
     "oidc-client": "^1.9.0",
     "popper.js": "^1.16.0",
@@ -67,7 +67,7 @@
     "typescript": "3.5.3"
   },
   "optionalDependencies": {
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.13.1",
     "protractor": "~5.4.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1"
